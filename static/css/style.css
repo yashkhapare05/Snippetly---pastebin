@@ -1,0 +1,469 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Body & Font ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #2c3e50;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header and Navbar ===== */
+header {
+  background: #2c3e50;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== Logo ===== */
+.logo {
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  user-select: none;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+/* ===== Navigation Links ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+nav ul li a:hover {
+  background-color: #1abc9c;
+  color: white;
+  box-shadow: 0 0 8px #1abc9caa;
+}
+
+nav ul li a.active {
+  background-color: #16a085;
+  color: white;
+  box-shadow: 0 0 10px #16a085bb;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ===== Page Title ===== */
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #34495e;
+  margin: 40px 0 10px;
+}
+
+/* ========================================================= */
+/* ===== HOME PAGE HERO SECTION ===== */
+/* ========================================================= */
+.hero {
+  background: linear-gradient(135deg, #ecf0f1 0%, #f9fafb 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero .page-title {
+  color: #1abc9c;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.hero .lead {
+  font-size: 1.05rem;
+  color: #2c3e50;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.hero .btn {
+  background: #1abc9c;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.hero .btn:hover {
+  background: #16a085;
+  transform: translateY(-1px);
+}
+
+.hero .btn-secondary {
+  background: #7f8c8d;
+  margin-left: 10px;
+}
+
+.hero .btn-secondary:hover {
+  background: #2c3e50;
+}
+
+/* ========================================================= */
+/* ===== DROP PAGE FORM ===== */
+/* ========================================================= */
+form {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto 60px;
+  padding: 40px 50px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+form label {
+  display: block;
+  margin-top: 25px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 1.05rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #1abc9c;
+  outline: none;
+  box-shadow: 0 0 6px #1abc9c66;
+}
+
+form textarea {
+  min-height: 280px;
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #1abc9c;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  color: #34495e;
+  cursor: pointer;
+}
+
+#password_field {
+  margin-top: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+form button[type="submit"] {
+  margin-top: 35px;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+form button[type="submit"]:hover {
+  background: #16a085;
+  transform: translateY(-1px);
+}
+
+/* Fade Animation for Password Field */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================================= */
+/* ===== ABOUT PAGE ===== */
+/* ========================================================= */
+.about-container {
+  max-width: 850px;
+  margin: 80px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 40px 50px;
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #1abc9c;
+  margin-bottom: 20px;
+}
+
+.about-container h2 {
+  margin-top: 30px;
+  color: #16a085;
+}
+
+.about-container p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.about-container .highlight {
+  color: #1abc9c;
+  font-weight: 600;
+}
+
+.about-container a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+.about-container a:hover {
+  text-decoration: underline;
+}
+
+.about-container footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ========================================================= */
+/* ===== VIEW PASTE PAGE ===== */
+/* ========================================================= */
+.paste-container {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto 60px;
+  padding: 40px 50px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.paste-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.paste-details label {
+  font-weight: 600;
+  color: #34495e;
+  margin-top: 10px;
+}
+
+.paste-details input[type="text"] {
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f5f7f8;
+  width: 100%;
+  font-size: 1rem;
+  color: #333;
+}
+
+.paste-details input[readonly] {
+  cursor: not-allowed;
+}
+
+/* Paste Box */
+.paste-box {
+  position: relative;
+  margin-top: 15px;
+}
+
+.paste-box pre {
+  background: #1e272e;
+  color: #dcdde1;
+  padding: 18px;
+  border-radius: 8px;
+  min-height: 250px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+}
+
+/* Copy Button */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #1abc9c;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.copy-btn:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+}
+
+.copy-btn.copied {
+  background-color: #27ae60;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.actions .btn {
+  background: #1abc9c;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.actions .btn:hover {
+  background: #16a085;
+  transform: translateY(-1px);
+}
+
+.actions .btn-secondary {
+  background: #7f8c8d;
+}
+
+.actions .btn-secondary:hover {
+  background: #2c3e50;
+}
+
+/* ========================================================= */
+/* ===== Responsive Design ===== */
+/* ========================================================= */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  nav ul li a {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  form, .about-container, .paste-container, .hero-inner {
+    padding: 25px 20px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .copy-btn {
+    top: 8px;
+    right: 8px;
+    padding: 6px 10px;
+  }
+}
+
+
+/* password */
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+

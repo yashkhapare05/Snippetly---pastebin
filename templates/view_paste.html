@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snippetly - View Paste</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <!-- ===== Header and Navbar ===== -->
+  <header>
+    <nav>
+      <a href="/" class="logo" aria-label="Snippetly logo">
+        <span class="logo-icon">📋</span>
+        Snippetly
+      </a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/drop">Code Dropper</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/view_paste" class="active">Paste</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Page Title ===== -->
+  <h1 class="page-title">Your Paste</h1>
+
+  <!-- ===== Paste Container ===== -->
+  <div class="paste-container">
+    <div class="paste-details">
+      <label>TITLE</label>
+      <input type="text" value="{{ title }}" readonly />
+
+      <label>Paste ID</label>
+      <input type="text" value="{{ paste_id }}" readonly />
+    </div>
+
+    <label>CONTENT</label>
+    <div class="paste-box">
+      <!-- FIX: use same id 'pasteContent' and enable Jinja to preserve formatting -->
+      <pre id="pasteContent" class="pasteContent">{{ content }}</pre>
+      <button id="copyBtn" class="copy-btn">📋 Copy</button>
+    </div>
+
+    <!-- ===== Action Buttons ===== -->
+    <div class="actions">
+      <a href="/drop" class="btn">Create New Paste</a>
+      <a href="/" class="btn btn-secondary">Back to Home</a>
+    </div>
+  </div>
+
+  <!-- ===== Copy Script ===== -->
+  <script>
+    const copyBtn = document.getElementById('copyBtn');
+    const pasteContent = document.getElementById('pasteContent'); // ✅ Fixed id
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(pasteContent.textContent.trim());
+      copyBtn.textContent = '✅ Copied!';
+      copyBtn.classList.add('copied');
+      setTimeout(() => {
+        copyBtn.textContent = '📋 Copy';
+        copyBtn.classList.remove('copied');
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

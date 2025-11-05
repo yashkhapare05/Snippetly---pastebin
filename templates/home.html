@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Snippetly</title>
+     <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+      <header>
+        
+        <nav>
+            <a href="#" class="logo" aria-label="Snippetly logo" style="color: #1abc9c; font-weight: bold; font-size: 1.5em; display: flex; align-items: center; text-decoration: none;">
+    <span style="font-size: 1.8em; margin-right: 10px;">📋</span>
+    Snippetly
+  </a>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/drop">Code Dropper</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/view_paste">Paste</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <div class="container">
+    <h1 style="text-align: center;">Welcome to Snippetly</h1>
+    <p style="text-align: center;">Your simple and secure place to drop code and share snippets online.</p>
+  </div>
+    <section class="hero" aria-labelledby="hero-title">
+  <div class="hero-inner" style="max-width:900px;margin:40px auto;padding:40px;background:#fff;border-radius:8px;">
+    <h1 id="hero-title" class="page-title">Welcome to Snippetly</h1>
+    <p class="lead" style="font-size:1.05rem;color:#2c3e50;line-height:1.7;">
+      Welcome to <strong>Snippetly</strong>, your smart and secure place to share code effortlessly!
+      Whether you’re a developer, student, or tech enthusiast, Snippetly helps you
+      <strong>create, save, and share code snippets</strong> with ease. No more messy notes or lost files —
+      simply paste your code, give it a title, and get a unique link to access it anytime.
+      Designed for simplicity and speed, Snippetly keeps your ideas organized, accessible,
+      and ready to share with your team or friends. Start dropping your snippets today
+      and make coding collaboration simpler than ever!
+    </p>
+
+    <div style="margin-top:20px;"text-align="center">
+      <a href="/drop" class="btn">Create a Paste</a>
+      <a href="/about" class="btn btn-secondary" style="margin-left:10px;">About US</a>
+    </div>
+  </div>
+</section>
+<footer>
+        &copy; {{ current_year or 2025 }} Snippetly— Made with  using Flask
+    </footer>
+</body>
+</html>

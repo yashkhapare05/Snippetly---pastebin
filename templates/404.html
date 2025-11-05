@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snippetly - 404 Not Found</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#" class="logo" aria-label="Snippetly logo">
+        <span class="logo-icon">📋</span>
+        Snippetly
+      </a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/drop">Code Dropper</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/view_paste">Paste</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="error-page">
+    <h1 class="page-title">404 - Page Not Found</h1>
+    <p class="error-message">
+      Oops! The page you’re looking for doesn’t exist or may have been moved.
+    </p>
+    <div class="error-actions">
+      <a href="/" class="btn">🏠 Back to Home</a>
+      <a href="/drop" class="btn-secondary">📋 Create a New Paste</a>
+    </div>
+  </main>
+
+  <style>
+    /* Optional inline styling for the 404 page */
+    .error-page {
+      text-align: center;
+      margin: 4rem auto;
+      max-width: 600px;
+      padding: 2rem;
+    }
+
+    .error-page .page-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ff4d4d;
+    }
+
+    .error-message {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .error-actions .btn,
+    .error-actions .btn-secondary {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 0.5rem;
+      transition: background 0.3s ease;
+    }
+
+    .error-actions .btn {
+      background: #007bff;
+      color: #fff;
+    }
+
+    .error-actions .btn:hover {
+      background: #0056b3;
+    }
+
+    .error-actions .btn-secondary {
+      background: #f1f1f1;
+      color: #333;
+    }
+
+    .error-actions .btn-secondary:hover {
+      background: #e2e2e2;
+    }
+  </style>
+</body>
+</html>

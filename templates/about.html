@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | DropBin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="/" class="logo">Snippetly</a>
+        <ul>
+            <li><a href="/" >Home</a></li>
+            <li><a href="/drop">Code Dropper</a></li>
+            <li><a href="/about" class="active" >About</a></li>
+            <li><a href="/view_paste">Paste</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="about-container">
+    <h1>About Snippetly</h1>
+    <p><strong>Snippetly</strong> is a simple and secure paste-sharing platform where you can create, share, and manage text snippets easily. Whether it’s code, notes, or quick text you want to send, DropBin helps you do it quickly and safely.</p>
+
+    <p>Every paste is given a unique short ID — like <span class="highlight">abcd</span> — making it easy to share with others via a simple link (e.g., <code>https://yourdomain.com/abcd</code>).</p>
+
+    <h2>🔒 Privacy & Security</h2>
+    <p>You can protect your pastes with a password, set expiration times, or even choose <span class="highlight">Burn After Read</span> — ensuring your data disappears after being viewed once.</p>
+
+    <h2>🧠 How It Works</h2>
+    <p>1. Go to the <a href="/drop">Code Dropper</a> page.<br>
+    2. Add your text and options.<br>
+    3. Share the unique link.<br>
+    4. (Optional) Use “Burn After Read” for self-destructing pastes.</p>
+
+    <h2>💡 Our Goal</h2>
+    <p>We aim to make sharing code or text simple, secure, and temporary — perfect for developers and teams alike.</p>
+
+    <footer>
+        &copy; {{ current_year or 2025 }} Snippetly— Made with  using Flask
+    </footer>
+</div>
+
+</body>
+</html>
